@@ -1,0 +1,74 @@
+/* Header */
+
+.envio{
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    background-color: grey;
+    margin: 0;
+}
+/* Nav */
+.navbar{
+    background-color: red;
+    color: black;
+}
+.textonav{
+    color: white;
+    font-family: sans-serif;
+}
+.textonav:hover{
+    color: red;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+/* Contenido */
+.seccion{
+    margin: 50px 50px 50px 50px;
+    font-family: sans-serif;
+    font-weight: 300;
+    text-align: center;
+    background-color: grey;
+    color: white;
+}
+.card{
+    width: 300px;
+    margin: 0px 0px 0px 500px;
+}
+.texto{
+    margin: 20px 50px 0px 50px;
+    font-family: 'Roboto, sans-serif';
+    font-weight: 300;
+    text-align: center;
+}
+/* pag error */
+.error{
+    margin: 150px 0px 150px 0px;
+}
+/* Footer */
+.footer{
+    margin-top: 50px;
+    padding: 50px 0;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+}
+.logofooter{
+    width: 120px;
+    height: 120px;
+}
+.text-reset{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+.linkUnstyled{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+
+.pagination{
+    margin: 50px 0px 0px 580px;
+}
