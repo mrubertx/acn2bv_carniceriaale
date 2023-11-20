@@ -1,5 +1,6 @@
 <?php
 require_once('conf/conf.php');
+require_once('_conexion.php');
 ?>
 
 
@@ -8,19 +9,19 @@ require_once('conf/conf.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carniceria Ale - Error</title>
+    <title>Carniceria Ale - Pedido</title>
     <?php require('layout/_css.php') ?>
 </head>
 <body>
     <!--nav-->
     <?php require('layout/_nav.php') ?>
-    <div class='containter error'>
-        <h1 class='text-center'>
-            Actualmente nos encontramos en mantenimiento, por favor intente mas tarde.
-        </h1>
+    <!--form-->
+    <div class='container'>
+        <h1>Gracias por realizar su pedido.</h1>
     </div>
     <!--footer-->
     <?php require('layout/_footer.php') ?>
+
     <!--js-->
     <?php require('layout/_js.php') ?>
 </body>

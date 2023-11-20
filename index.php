@@ -32,15 +32,16 @@ $productos = paginador_lista($productos, $pagina_actual, $cuantos_por_pagina);
 <body>
     <!--nav-->
     <?php require('layout/_nav.php') ?>
+
     <!--contenido-->
-    <div class='container-fluid'>
-        <div class='seccion'>
+    <div class='seccion'>
             <h1 class='text text-center'>Productos mas pedidos</h1>
-        </div>
+    </div>
+    <div class='container-fluid'>    
             <?php foreach ($productos as $item) : ?>
-                <div class= 'd-flex flex-wrap'>
+                <div class= 'contenedor'>
                     <div class="card center">
-                        <img src="img/icono/<?php echo $item['categoria']?>.png" class="card-img-top" alt="<?php echo $item['categoria'] ?>">
+                        <img src="img/prod/<?php echo $item['nombre']?>.png" class="card-img-top img" alt="<?php echo $item['nombre'] ?>">
                             <div class="card-body">
                                 <h2 class='card-title text-center'><?php echo $item['nombre'] ?></h2>
                                 <p class="text-center"><?php echo $item['descripcion'] ?></p>
@@ -56,35 +57,12 @@ $productos = paginador_lista($productos, $pagina_actual, $cuantos_por_pagina);
                     </div>
                 </div>
             <?php endforeach ?>
-            
-            <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <?php if($paginado_enlaces['anterior']): ?>
-                    <li class="page-item">
-                        <a class="page-link" href="?pag=<?php echo $paginado_enlaces['primero'] ?>"> Primero </a>                        
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="?pag=<?php echo $paginado_enlaces['anterior'] ?>"> <?php echo $paginado_enlaces['anterior'] ?> </a>
-                    </li>
-                <?php endif ?>
-                <li class="page-item active"> 
-                    <span class="page-link">
-                        <?php echo $paginado_enlaces['actual'] ?> 
-                    </span>
-                </li>
-                <?php if($paginado_enlaces['siguiente']): ?>
-                    <li class="page-item">
-                        <a class="page-link" href="?pag=<?php echo $paginado_enlaces['siguiente'] ?>"> <?php echo $paginado_enlaces['siguiente'] ?> </a>
-                    </li>
-                    <li class="page-item">
-                    <a class="page-link" href="?pag=<?php echo $paginado_enlaces['ultimo'] ?>"> Último </a>
-                    </li>
-                <?php endif ?>
-            </ul>
-        </nav>
-    </div>
+    </div>  
+    <!--paginador-->                             
+    <?php require('layout/_paginador.php') ?>
     <!--footer-->
     <?php require('layout/_footer.php') ?>
+
     <!--js-->
     <?php require('layout/_js.php') ?>
 </body>

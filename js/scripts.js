@@ -1,26 +1,17 @@
-/*!
-    * Start Bootstrap - SB Admin v7.0.5 (https://startbootstrap.com/template/sb-admin)
-    * Copyright 2013-2022 Start Bootstrap
-    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
-    */
-    // 
-// Scripts
-// 
+// Obtén una referencia al pie de página
+const footer = document.querySelector('.footer');
 
-window.addEventListener('DOMContentLoaded', event => {
-
-    // Toggle the side navigation
-    const sidebarToggle = document.body.querySelector('#sidebarToggle');
-    if (sidebarToggle) {
-        // Uncomment Below to persist sidebar toggle between refreshes
-        // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
-        //     document.body.classList.toggle('sb-sidenav-toggled');
-        // }
-        sidebarToggle.addEventListener('click', event => {
-            event.preventDefault();
-            document.body.classList.toggle('sb-sidenav-toggled');
-            localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
-        });
+// Función para verificar la posición de desplazamiento y mostrar u ocultar el pie de página
+function toggleFooter() {
+    if (window.scrollY > 100) { // Cambia este valor según la cantidad de desplazamiento que desees
+        footer.style.display = 'flex';
+    } else {
+        footer.style.display = 'none';
     }
+}
 
-});
+// Asigna la función al evento de desplazamiento
+window.addEventListener('scroll', toggleFooter);
+
+// Llama a la función una vez al inicio para establecer el estado inicial
+toggleFooter();
